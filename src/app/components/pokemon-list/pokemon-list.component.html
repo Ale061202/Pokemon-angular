@@ -1,5 +1,9 @@
-<p>Listado fácil de Pokémon</p>
+<h1>Listado Pokémon</h1>
 
-<ul>
-  <li *ngFor="let pokemon of listadoPokemon">{{ pokemon.name }}</li>
-</ul>
+<div class="caja">
+  <mat-card class="example-card" *ngFor="let pokemon of listadoPokemon">
+    <mat-card-header>
+      <mat-card-title>{{ pokemon.name }}</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>
