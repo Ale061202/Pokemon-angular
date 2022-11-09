@@ -6,12 +6,14 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialImportsModule } from './module/material-imports.module';
+import { PokemonItemComponent } from './components/pokemon-item/pokemon-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PokemonListComponent
+    PokemonListComponent,
+    PokemonItemComponent
   ],
   imports: [
     BrowserModule,

@@ -8,14 +8,19 @@ import { PokemonService } from 'src/app/services/pokemon-service.service';
   styleUrls: ['./pokemon-list.component.css']
 })
 export class PokemonListComponent implements OnInit {
+  pokemonSelected!: Pokemon;
   listadoPokemon: Pokemon[] = [];
-
+  
   constructor(private pokemonService: PokemonService) { }
-
+  
   ngOnInit(): void {
-    this.pokemonService.pokemonList().subscribe(response => {
-      this.listadoPokemon = response.results;
-    });
+    this.pokemonService.pokemonList().subscribe(resp => {
+      this.listadoPokemon = resp.results
+    })
+  }
+  
+  changeSelected(eventNombrePokemonSeleccionado: Pokemon) {
+    this.pokemonSelected = eventNombrePokemonSeleccionado;
   }
 
 }
