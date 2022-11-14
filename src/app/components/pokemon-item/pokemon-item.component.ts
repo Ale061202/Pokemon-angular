@@ -20,4 +20,9 @@ export class PokemonItemComponent implements OnInit {
     this. onPokemonSelected.emit(this.listadoPokemon);
   }
 
+  getImgPokemon(pokemon : Pokemon){
+    let id = pokemon.url.split("/").reverse()[1];
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+  }
+
 }
